@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KANGA HOSPITAL-COIMBATORE</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header style */
+        #header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Main container */
+        #container {
+            display: flex;
+            height: 80vh;
+        }
+
+        /* Menu (left) */
+        #menu {
+            width: 25%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #menu a {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #menu a:hover {
+            background-color: #1e7e34;
+        }
+
+        /* Content (right) */
+        #content {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script>
+        function showContent(section) {
+            let content = document.getElementById("content");
+
+            if (section === "home") {
+                content.innerHTML = "<h2>Welcome to KANGA HOSPITAL-COIMBATORE</h2><p>Kanga Hospital provides quality healthcare services with modern facilities and experienced doctors.</p>";
+            }
+            else if (section === "about") {
+                content.innerHTML = "<h2>About Us</h2><p>Our hospital was established in 2005. We provide 24/7 emergency care and specialized treatments.</p>";
+            }
+            else if (section === "services") {
+                content.innerHTML = "<h2>Our Services</h2><ul><li>General Medicine</li><li>Surgery</li><li>Maternity Care</li><li>Emergency Services</li></ul>";
+            }
+            else if (section === "contact") {
+                content.innerHTML = "<h2>Contact Us</h2><p>Address: Kanga Hospital, Coimbatore<br>Phone: 9876543210<br>Email: kangahealthcare@gmail.com</p>";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="header">
+    <h1>KANGA HOSPITAL-COIMBATORE</h1>
+    <p>We Care for Your Health</p>
+</div>
+
+<div id="container">
+    <div id="menu">
+        <a onclick="showContent('home')">Home</a>
+        <a onclick="showContent('about')">About Us</a>
+        <a onclick="showContent('services')">Services</a>
+        <a onclick="showContent('contact')">Contact</a>
+    </div>
+
+    <div id="content">
+        <h2>Welcome to KANGA HOSPITAL-COIMBATORE</h2>
+        <p>Click menu items to view information here.</p>
+    </div>
+</div>
+
+</body>
+</html>
